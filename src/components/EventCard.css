@@ -1,0 +1,143 @@
+.event-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+}
+
+.event-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.event-card--past {
+  opacity: 0.55;
+}
+
+.event-card--past:hover {
+  opacity: 0.75;
+}
+
+.event-card__stripe {
+  width: 4px;
+  flex-shrink: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.event-card__body {
+  flex: 1;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ---- Top row ---- */
+.event-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.event-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.event-card__category {
+  font-size: 0.68rem;
+}
+
+.event-card__countdown {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--ivory-dim);
+  background: rgba(255,255,255,0.06);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+
+.event-card__countdown--today {
+  color: var(--gold);
+  background: var(--gold-dim);
+}
+
+.event-card__expand-btn {
+  background: transparent;
+  color: var(--ivory-dim);
+  font-size: 0.65rem;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  border: 1px solid transparent;
+  flex-shrink: 0;
+}
+
+.event-card__expand-btn:hover {
+  color: var(--ivory);
+  border-color: var(--border);
+  background: rgba(255,255,255,0.04);
+}
+
+/* ---- Content ---- */
+.event-card__name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ivory);
+  line-height: 1.3;
+}
+
+.event-card__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.event-card__info-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  color: var(--ivory-dim);
+}
+
+.event-card__info-icon {
+  font-size: 0.9rem;
+}
+
+.event-card__description {
+  font-size: 0.9rem;
+  color: var(--ivory-dim);
+  line-height: 1.7;
+  padding: 12px;
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--border);
+}
+
+/* ---- Actions ---- */
+.event-card__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .event-card__body {
+    padding: 14px 16px;
+  }
+
+  .event-card__name {
+    font-size: 1rem;
+  }
+}

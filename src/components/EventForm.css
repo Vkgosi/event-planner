@@ -1,0 +1,57 @@
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.event-form__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.event-form__char-count {
+  font-size: 0.72rem;
+  color: var(--ivory-dim);
+  text-align: right;
+  margin-top: 2px;
+}
+
+.event-form__submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.event-form__spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0,0,0,0.3);
+  border-top-color: var(--midnight);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+/* Colour date/time inputs */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.7);
+  cursor: pointer;
+}
+
+select.form-input option {
+  background: var(--deep);
+  color: var(--ivory);
+}
+
+@media (max-width: 520px) {
+  .event-form__row {
+    grid-template-columns: 1fr;
+  }
+}
