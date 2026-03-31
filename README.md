@@ -39,7 +39,7 @@ A full-featured personal event planner built with **React + Vite**, using the **
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/event-planner.git
+git clone https://github.com/vkgosi/event-planner.git
 cd event-planner
 
 # 2. Install dependencies
